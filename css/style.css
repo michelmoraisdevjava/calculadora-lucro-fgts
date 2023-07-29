@@ -1,0 +1,150 @@
+:root {
+    --cor-primaria: #0066cc;
+    /* Azul mais escuro */
+    --cor-secundaria: #0099cc;
+    /* Azul mais claro */
+    --cor-destaque: #ffc107;
+    /* Amarelo */
+    --cor-fundo: #f8f9fa;
+    /* Cinza claro */
+    --cor-fundo-body: #dfdada;
+    /* Cinza mais claro para o fundo do body */
+    --cor-fundo-calculator: #f9eded;
+    /* Branco para o fundo da classe .calculator */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo-body);
+    color: #333;
+    /* Cor de texto padrão */
+}
+
+span {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+.calculator {
+    text-align: center;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--cor-fundo);
+    border-radius: 5px;
+    background-color: var(--cor-fundo-calculator);
+}
+
+.imagem {
+    
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #6a6767;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Estilos adicionais para o botão */
+button {
+    font-weight: bold;
+    padding: 10px;
+    background-color: var(--cor-destaque);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: var(--cor-primaria);
+}
+
+#calcularBtn {
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+    /* Transição suave para escala no hover */
+}
+
+#calcularBtn:hover {
+    transform: scale(1.05);
+    /* Aumenta um pouco o tamanho no hover */
+}
+
+.resultado-container {
+    margin-top: 20px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#calcularBtn:focus+.resultado-container,
+#calcularBtn:active+.resultado-container {
+    opacity: 1;
+}
+
+#resultado {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-style: normal;
+    height: auto;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Estilos para tablets e telas menores */
+    .calculator {
+        max-width: 90%;
+    }
+
+    .imagem {
+        max-width: 300px;
+    }
+
+    input {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Estilos para smartphones e telas ainda menores */
+    .calculator {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .imagem {
+        max-width: 200px;
+    }
+
+    input {
+        max-width: 180px;
+    }
+}
